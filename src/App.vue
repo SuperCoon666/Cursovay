@@ -1,32 +1,45 @@
 <template>
-  <div id="app">
-    <nav>
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </nav>
-    <router-view />
+  <div class="App">
+      <div class="MainContent">
+        <router-view></router-view>
+      </div>
+    <Layout></Layout>
+    <SideBar></SideBar>
   </div>
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
+<script>
+import Layout from "@/components/Layout";
+import SideBar from "@/components/SideBar";
 
-nav {
-  padding: 30px;
-
-  a {
-    font-weight: bold;
-    color: #2c3e50;
-
-    &.router-link-exact-active {
-      color: #42b983;
+export default {
+    name: "app",
+    components: {
+    Layout,
+    SideBar
+    },
+    created(){
+        document.body.style.margin = 0;
+        document.body.style.backgroundColor = '#000000';
     }
-  }
-}
+};
+</script>
+
+<style lang="scss">
+    .MainContent{
+        font-family: "Avenir", Helvetica, Arial, sans-serif;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        text-align: center;
+        color: #2c3e50;
+        margin-top: 60px;
+    }
+    .App{
+        background-color: #000000;
+        color: #eef2f1;
+        margin: 0;
+        border: 0;
+        width: 100%;
+        height: 100%;
+    }
 </style>

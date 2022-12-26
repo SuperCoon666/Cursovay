@@ -1,5 +1,8 @@
 <template>
   <div class="hello">
+    <router-link :to="{name:'content'}" >
+        <el-button></el-button>
+    </router-link>
     <h1>{{ msg }}</h1>
     <p>
       For a guide and recipes on how to configure / customize this project,<br />
@@ -32,14 +35,6 @@
           target="_blank"
           rel="noopener"
           >vuex</a
-        >
-      </li>
-      <li>
-        <a
-          href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-eslint"
-          target="_blank"
-          rel="noopener"
-          >eslint</a
         >
       </li>
     </ul>
